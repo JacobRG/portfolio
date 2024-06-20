@@ -10,7 +10,7 @@ export default function Home() {
     <div>
 
       {/* Avatar */}
-      <div className="flex flex-col justify-center items-center space-y-5 min-h-screen p-4 md:p-0">
+      <div className="flex flex-col justify-center items-center space-y-5 md:min-h-screen py-12 md:py-0">
         <div className="avatar">
           <div className="w-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
             <Image src={headshot} alt={"Headshot"} />
@@ -27,7 +27,7 @@ export default function Home() {
         </Link>
 
         {/* Divider */}
-        <div className="absolute bottom-5 left-0 right-0 text-center mx-4 md:mx-72">
+        <div className="max-sm:hidden absolute bottom-5 left-0 right-0 text-center mx-4 md:mx-72">
           <div className="absolute inset-0 flex items-center" aria-hidden="true">
             <div className="w-full border-t border-gray-300" />
           </div>
