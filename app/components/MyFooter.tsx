@@ -4,7 +4,7 @@ const navigation = [
     {
       name: 'Facebook',
       href: 'https://www.facebook.com/profile.php?id=100008270946066',
-      icon: (props) => (
+      icon: (props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
             fillRule="evenodd"
@@ -17,7 +17,7 @@ const navigation = [
     {
       name: 'Instagram',
       href: 'https://instagram.com/jacobrgambrell',
-      icon: (props) => (
+      icon: (props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
             fillRule="evenodd"
@@ -30,7 +30,7 @@ const navigation = [
     {
       name: 'GitHub',
       href: 'https://github.com/JacobRG',
-      icon: (props) => (
+      icon: (props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
             fillRule="evenodd"

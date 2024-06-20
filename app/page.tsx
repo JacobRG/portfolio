@@ -3,7 +3,6 @@ import Link from "next/link";
 import NavBar from "./components/NavBar";
 import Feed from "./components/Feed";
 import headshot from '../public/IMG_1153.jpg';
-import MyDivider from "./components/MyDivider";
 import MyFooter from "./components/MyFooter";
 
 export default function Home() {
@@ -14,14 +13,14 @@ export default function Home() {
       <div className="flex flex-col justify-center items-center space-y-5 min-h-screen p-4 md:p-0">
         <div className="avatar">
           <div className="w-24 md:w-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-            <Image src={headshot} />
+            <Image src={headshot} alt={"Headshot"} />
           </div>
         </div>
 
         {/* Text */}
         <div className="flex flex-col items-center">
-          <h1 className="text-2xl md:text-3xl font-bold text-center">Hi,<br /> I'm Jacob.</h1>
-          <h1 className="text-lg md:text-xl">Let's connect on LinkedIn</h1>
+          <h1 className="text-2xl md:text-3xl font-bold text-center">Hi,<br /> I’m Jacob.</h1>
+          <h1 className="text-lg md:text-xl">Let’s connect on LinkedIn</h1>
         </div>
         <Link target="_blank" href="https://www.linkedin.com/in/jacobgambrell/">
           <button className="btn btn-wide">Connect</button>
