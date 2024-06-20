@@ -12,15 +12,15 @@ export default function Home() {
       {/* Avatar */}
       <div className="flex flex-col justify-center items-center space-y-5 min-h-screen p-4 md:p-0">
         <div className="avatar">
-          <div className="w-24 md:w-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+          <div className="w-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
             <Image src={headshot} alt={"Headshot"} />
           </div>
         </div>
 
         {/* Text */}
         <div className="flex flex-col items-center">
-          <h1 className="text-2xl md:text-3xl font-bold text-center">Hi,<br /> I’m Jacob.</h1>
-          <h1 className="text-lg md:text-xl">Let’s connect on LinkedIn</h1>
+          <h1 className="text-3xl font-bold text-center">Hi,<br /> I’m Jacob.</h1>
+          <h1 className="text-xl">Let’s connect on LinkedIn</h1>
         </div>
         <Link target="_blank" href="https://www.linkedin.com/in/jacobgambrell/">
           <button className="btn btn-wide">Connect</button>
@@ -32,14 +32,14 @@ export default function Home() {
             <div className="w-full border-t border-gray-300" />
           </div>
           <div className="relative flex justify-center">
-            <span className="bg-white px-3 text-sm md:text-base font-medium leading-6 text-gray-900">My experience</span>
+            <span className="bg-white px-3 text-lg md:text-base font-medium leading-6 text-gray-900">My experience</span>
           </div>
         </div>
 
       </div>
 
       {/* Experience sections */}
-      <div className="flex flex-col md:flex-row px-0 md:px-64 space-x-16"> {/* trying mobile here */}
+      <div className="flex flex-col md:flex-row px-0 md:px-64 md:space-x-16 space-y-12 md:space-y-0"> {/* trying mobile here */}
         <Feed />
         <div className="flex flex-col space-y-5">
           <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-300">
@@ -130,13 +130,13 @@ export default function Home() {
 
       </div>
 
-      <div className="flex flex-row px-64 pt-24">
+      {/* <div className="flex flex-row px-64 pt-24">
         <div>
           <h1 className="text-2xl font-semibold">My Skills</h1>
           <p>Here is a story about my skills and how I got them. Probably about my experience but also heavily my personal interests and projects contributing to my skills.</p>
         </div>
         
-      </div>
+      </div> */}
 
       <div className="pt-12"><MyFooter /></div>
 
