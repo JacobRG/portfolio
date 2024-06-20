@@ -1,113 +1,146 @@
 import Image from "next/image";
+import Link from "next/link";
+import NavBar from "./components/NavBar";
+import Feed from "./components/Feed";
+import headshot from '../public/IMG_1153.jpg';
+import MyDivider from "./components/MyDivider";
+import MyFooter from "./components/MyFooter";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div>
+
+      {/* Avatar */}
+      <div className="flex flex-col justify-center items-center space-y-5 min-h-screen p-4 md:p-0">
+        <div className="avatar">
+          <div className="w-24 md:w-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+            <Image src={headshot} />
+          </div>
         </div>
+
+        {/* Text */}
+        <div className="flex flex-col items-center">
+          <h1 className="text-2xl md:text-3xl font-bold text-center">Hi,<br /> I'm Jacob.</h1>
+          <h1 className="text-lg md:text-xl">Let's connect on LinkedIn</h1>
+        </div>
+        <Link target="_blank" href="https://www.linkedin.com/in/jacobgambrell/">
+          <button className="btn btn-wide">Connect</button>
+        </Link>
+
+        {/* Divider */}
+        <div className="absolute bottom-5 left-0 right-0 text-center mx-4 md:mx-72">
+          <div className="absolute inset-0 flex items-center" aria-hidden="true">
+            <div className="w-full border-t border-gray-300" />
+          </div>
+          <div className="relative flex justify-center">
+            <span className="bg-white px-3 text-sm md:text-base font-medium leading-6 text-gray-900">My experience</span>
+          </div>
+        </div>
+
       </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      {/* Experience sections */}
+      <div className="flex flex-col md:flex-row px-0 md:px-64 space-x-16"> {/* trying mobile here */}
+        <Feed />
+        <div className="flex flex-col space-y-5">
+          <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-300">
+            <div className="collapse-title text-xl font-medium">
+              <h1 className="text-lg">Papa Johns Call Center Optimization</h1>
+              <h1 className="text-base">(Senior Design Project)</h1>
+            </div>
+            <div className="collapse-content"> 
+              <div className="space-y-1">
+                <ul className="list-disc px-4">
+                  <li>Designed and developed machine-learning monitoring systems to detect customer sentiment trends from call center interactions, social media, and website data</li>
+                  <li>Utilized Python for web scraping, data cleaning, feature engineering, and modeling</li>
+                  <li>Constructed comprehensive documentation and technical guides</li>
+                  <li>Conducted weekly meetings and maintained direct communication with the Papa Johns team to align
+                  project objectives and report progress</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-300">
+            <div className="collapse-title text-xl font-medium">
+              <h1 className="text-lg">Silver Fern</h1>
+              <h1 className="text-base">(Software Engineer Intern)</h1>
+            </div>
+            <div className="collapse-content"> 
+              <div className="space-y-1">
+                <ul className="list-disc px-4">
+                  <li>Contributed to the development of “FULFILL”, a software solution for wholesale and retail greenhouse businesses</li>
+                  <li>Evolved from learner to active developer; coded customer data analysis applications and managed database operations</li>
+                  <li>Utilized C#, Blazor, Docker, MongoDB, and GraphQL in software development</li>
+                  <li>Practiced Agile methodologies, domain-driven design, event sourcing, and test-driven development</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-300">
+            <div className="collapse-title text-xl font-medium">
+              <h1 className="text-lg">Awesome Inc</h1>
+              <h1 className="text-base">(Coding Club Head Coach)</h1>
+            </div>
+            <div className="collapse-content"> 
+              <div className="space-y-1">
+                <ul className="list-disc px-4">
+                  <li>Led full classrooms of students in developing in Python and building strong programming foundations</li>
+                  <li>Launched remote learning and facilitated multiple weekly sessions of interactive coding</li>
+                  <li>Monitored student progress and engagement, ensuring a supportive and effective educational experience</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-300">
+            <div className="collapse-title text-xl font-medium">
+              <h1 className="text-lg">Dribbly Sports Stat Tracking Bot</h1>
+              <h1 className="text-base">(Discord Bot)</h1>
+            </div>
+            <div className="collapse-content"> 
+              <div className="space-y-1">
+                <ul className="list-disc px-4">
+                  <li>Developed a Discord bot using Python to provide live sports stats for tracking functionalities</li>
+                  <li>Integrated APIs for real-time data retrieval and used Discord API for bot commands allowing users to
+                  track player stats</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-300">
+            <div className="collapse-title text-xl font-medium">
+              <h1 className="text-lg">TSKR Task Management App</h1>
+              <h1 className="text-base">(iOS Mobile App)</h1>
+            </div>
+            <div className="collapse-content"> 
+              <div className="space-y-1">
+                <ul className="list-disc px-4">
+                  <li>Engineered a task management app with SwiftUI, enabling personal productivity and social interaction
+                  through task sharing</li>
+                  <li>Managed the entire app lifecycle from development to publication in the Apple App Store, navigating the
+                  App Store’s review process, and adhering to all guidelines for successful app approval and release</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="flex flex-row px-64 pt-24">
+        <div>
+          <h1 className="text-2xl font-semibold">My Skills</h1>
+          <p>Here is a story about my skills and how I got them. Probably about my experience but also heavily my personal interests and projects contributing to my skills.</p>
+        </div>
+        
       </div>
-    </main>
+
+      <div className="pt-12"><MyFooter /></div>
+
+    </div>
   );
 }
