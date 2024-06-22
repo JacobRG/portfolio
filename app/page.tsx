@@ -5,6 +5,7 @@ import Feed from "./components/Feed";
 import headshot from '../public/IMG_1153.jpg';
 import MyFooter from "./components/MyFooter";
 import MyContact from "./components/MyContact";
+import AppStoreCard from "./components/AppStoreCard";
 
 export default function Home() {
   return (
@@ -129,6 +130,10 @@ export default function Home() {
 
         </div>
 
+      </div>
+
+      <div className="md:px-56 pt-12">
+        <AppStoreCard />
       </div>
       
       {/* <MyContact /> */}
