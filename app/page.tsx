@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import Feed from "./components/Feed";
 import headshot from '../public/IMG_1153.jpg';
 import MyFooter from "./components/MyFooter";
+import MyContact from "./components/MyContact";
 
 export default function Home() {
   return (
@@ -80,7 +81,7 @@ export default function Home() {
           <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-300">
             <div className="collapse-title text-xl font-medium">
               <h1 className="text-lg">Awesome Inc</h1>
-              <h1 className="text-base">(Coding Club Head Coach)</h1>
+              <h1 className="text-base">(Coding Club Coach)</h1>
             </div>
             <div className="collapse-content"> 
               <div className="space-y-1">
@@ -129,6 +130,8 @@ export default function Home() {
         </div>
 
       </div>
+      
+      {/* <MyContact /> */}
 
       {/* <div className="flex flex-row px-64 pt-24">
         <div>
